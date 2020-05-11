@@ -1,13 +1,17 @@
 function IMouth=my_detectedMouth(image,downSamplingRatio, thresholdMouth)
 
+%% Baseline Algorithm using prebuilt functions
+
 % Baseline Face: first, detect the faces
 faceDetector = vision.CascadeObjectDetector;
 Im = rgb2gray(image) ;
 I = Im(1:downSamplingRatio:end,1:downSamplingRatio:end);
 I_rezised = image(1:downSamplingRatio:end,1:downSamplingRatio:end);
 bboxes = faceDetector(I);  
-% We have many false positive, eyes being labelled as mouth. In order to
-% correct that, we decided to detect eyes and apply an IoU. 
+
+% There are many false positives when using the prebuilt mouth detector, eyes being labelled as mouth. 
+% In order to correct that, we decided to detect the eyes, apply an IoU between eyes and mouthes and keep
+% the mouth where the IoU is less than a defined threshold.
 
 bboxes_m1 =[] ;
 bboxes_e1 = [] ;
