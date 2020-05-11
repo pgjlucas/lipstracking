@@ -3,8 +3,8 @@ function timeComplexity=Classifier4(image)
 faceDetector = vision.CascadeObjectDetector;
 myMouthDetector1 = vision.CascadeObjectDetector('lipsDetector1.xml');
 
-positiveFolder='/Users/Pierre/Documents/Etats-Unis/CPE_428/Final Project/True_false_data/positive_data/' ;
-negativeFolder='/Users/Pierre/Documents/Etats-Unis/CPE_428/Final Project/True_false_data/negative_data/' ;
+positiveFolder='/True_false_data/positive_data/' ;
+negativeFolder='/True_false_data/negative_data/' ;
 negativeImages = imageDatastore(negativeFolder);
 positiveImages = imageDatastore(positiveFolder);
 
