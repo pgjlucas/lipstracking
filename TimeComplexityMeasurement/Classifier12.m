@@ -2,7 +2,7 @@ function timeComplexity=Classifier2(image)
 % Load the classifier
 faceDetector = vision.CascadeObjectDetector;
 myMouthDetector1 = vision.CascadeObjectDetector('lipsDetector1.xml');
-myMouthDetector2 = vision.CascadeObjectDetector('lipsDetector2.xml');
+
 % Image processing
 imColor = image ;
 imGray = rgb2gray(imColor) ;
