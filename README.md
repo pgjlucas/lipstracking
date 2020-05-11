@@ -7,5 +7,11 @@ Bottlneck architecture
 2. Detect the mouth from the detected bounding box
 3. Apply the 2 to the next frame, in the surrounding area of the detected mouth (twice the size)
 
+## Files
+
+Different architectures have been implemented and tested:
+1. my_detectedMouth 
+2. my_detectedMouthBaseline
+
 ## Results
 
