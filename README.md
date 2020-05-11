@@ -1,8 +1,8 @@
 # Lips Tracking
 ## Scope
-Development of a real time lips tracking algorithm using computer vision techniques. 
+Development of a real time tracking algorithm using computer vision techniques. 
 ## Tracking architecture
-Bottlneck architecture
+Bottleneck architecture, face to mouth.
 1. Detect the face from an image and crop the bottom half of the detected bounding box
 2. Detect the mouth from the detected bounding box
 3. Apply the 2 to the next frame, in the surrounding area of the detected mouth (twice the size)
@@ -31,4 +31,15 @@ Our final architecture to detect the mouth from a face is the following:
 4. True_False_positive_data.zip: contains 160 images of positive examples and 160 images of negative examples
 
 ## Results
+- Test set: 25 frames from AVICAR dataset, 4 images per frame (100 images total)
+- Faces are correclty detected for the 25 frames 
 
+| Classifier    | Precision |Recall | Inference Time (s) |
+| ------------- | -------------- | -------------- | -------------- |
+| Classifier 1  |  50%  | 100%	 |    0.013  |
+| Classifier 1 + 2  | 99% | 99%	 |    0.027  | 
+| Classifier 1 + 3  |58% | 100%  |	  0.038  |
+| Whole model	      | 99% | 100% |    0.051  |
+
+The whole model (classifier 1 + 2 + 3) is too slow for the real time tracking. 
+Classifier 1 + 2 is good for tracking.
