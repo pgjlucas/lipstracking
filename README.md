@@ -42,4 +42,4 @@ Our final architecture to detect the mouth from a face is the following:
 | Whole model	      | 99% | 100% |    0.051  |
 
 The whole model (classifier 1 + 2 + 3) is too slow for the real time tracking. 
-Classifier 1 + 2 is good for tracking.
+Classifier 1 + 2 is good for tracking. 
