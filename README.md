@@ -2,7 +2,7 @@
 ## Scope
 Development of a real time tracking algorithm using computer vision techniques. 
 ## Tracking architecture
-Bottleneck architecture, face to mouth.
+Bottleneck architecture, face to lips.
 1. Detect the face from an image and crop the bottom half of the detected bounding box
 2. Detect the mouth from the detected bounding box
 3. Apply the 2 to the next frame, in the surrounding area of the detected mouth (twice the size)
